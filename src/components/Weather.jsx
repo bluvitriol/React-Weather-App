@@ -7,12 +7,7 @@ import humidity_icon from '../assets/humidity.png'
 const Weather = () => {
 
     const inputRef = useRef()
-
-
-
     const [weatherData, setWeatherData] = useState(false);
-
-
     const search = async (city) => {
         if (city === "") {
             alert("Enter City Name!");
@@ -36,7 +31,6 @@ const Weather = () => {
             windSpeed: data.wind.speed,
             temperature: Math.floor(data.main.temp),
             location: data.name,
-            
         })
         }
         catch(error){
